@@ -9,7 +9,6 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import DarkModeContext from '../hooks/DarkModeContext';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -65,12 +64,11 @@ const GlobalStyle = createGlobalStyle`
 
 
 function App() {
-  const [_isDarkMode, _setIsDarkMode] = React.useState(true);
+  const [_isDarkMode, _setIsDarkMode] = React.useState(false);
   const SetIsDarkMode = (val) => {
     _setIsDarkMode(val);
   }
   return (
-    <DarkModeContext.Provider value={{IsDarkMode: _isDarkMode, SetIsDarkMode}}>
       <ThemeProvider theme={{darkMode: _isDarkMode}}>
         <GlobalStyle/>
         <Router>
@@ -89,7 +87,6 @@ function App() {
           </Container>
         </Router>
       </ThemeProvider>
-    </DarkModeContext.Provider>
   );
 }
 

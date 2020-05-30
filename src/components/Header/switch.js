@@ -2,7 +2,6 @@ import React from 'react';
 import Styled from 'styled-components';
 import lightmodeImg from '../../assets/images/switch_background/light.png';
 import darkModeImg from '../../assets/images/switch_background/dark.png';
-import DarkModeContext from '../../hooks/DarkModeContext';
 
 const DarkModeWrapper = Styled.div`
   display: flex;
@@ -45,7 +44,7 @@ const Switch = Styled.input`
 `;
 
 const ThemeSwitch = () => {
-  const {IsDarkMode, SetIsDarkMode} = React.useContext(DarkModeContext);
+  const [IsDarkMode, SetIsDarkMode] = React.useState(false);
   console.log('IS DARK MODE');
   console.log(IsDarkMode);
 
