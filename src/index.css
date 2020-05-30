@@ -1,13 +1,28 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'worksans';
+  src: url('./assets/fonts/worksans.ttf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'assistant';
+  src: url('./assets/fonts/assistant.ttf');
+}
+
+* {
+  font-size: 14px;
+  font-family: 'Worksans', sans-serif;
+}
+
+.font-worksans {
+  font-family: 'Work Sans', sans-serif; 
+}
+
+.font-assistant {
+  font-family: 'assistant', sans-serif;
+  word-spacing: 4px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
