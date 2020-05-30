@@ -80,7 +80,7 @@ function App() {
                 <About />
               </Route>
               <Route path="/">
-                <Work />
+                <Work isDarkMode={_isDarkMode} />
               </Route>
             </Switch>
             <Footer isDarkMode={_isDarkMode}/>
