@@ -5,7 +5,7 @@ const SEO = props => {
   const name = 'Astari Dwi Rahmanisa';
   const description = 'Hello! I am Astari and this is my UI/UX Portfolio.';
 
-  const title = props.pageName ? `${props.pageName} | ${name}` : name;
+  const title = props.title ? `${props.title} | ${name}` : name;
 
   return (
     <Helmet>
