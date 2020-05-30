@@ -5,8 +5,10 @@ const greetingText1 = `Hello! `;
 const greetingText2 = `I am Astari - an interface and experience designer from Bogor, Indonesia`;
 
 const GreetingWrapper = styled.section`
+  margin-top: 256px;
   width: 50%;
   @media (max-width: 768px) {
+    margin-top: 144px;
     width: 100%;
   }
 `;
