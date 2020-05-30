@@ -5,6 +5,8 @@ const ImageStyled = styled.img`
   width: ${props => props.width};
   height: ${props => props.height};
   filter: ${props => props.filter};
+  ${props => props.clipPath ? `clip-path: ${props.clipPath};` : ''}
+  display: ${props => props.isDisplay === undefined || props.isDisplay === true ? 'initial' : 'none'};
   @media (max-width: 768px) {
     width: ${props => props.mobileWidth ? props.mobileWidth : props.width};
     heigth: ${props => props.mobileHeight ? props.mobileHeight : props.height};
@@ -18,7 +20,10 @@ const Image = props => {
 
   return (<ImageStyled src={props.src} alt={props.alt}
             width={width} height={height} filter={filter}
-            mobileWidth={props.mobileWidth} mobileHeight={props.mobileHeight}/>)
+            mobileWidth={props.mobileWidth} mobileHeight={props.mobileHeight}
+            clipPath={props.clipPath} isDisplay={props.isDisplay}
+            onLoad={props.onLoad}
+            onError={props.onError}/>)
 }
 
 export default Image;
