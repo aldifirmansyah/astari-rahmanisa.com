@@ -13,10 +13,12 @@ const CardWrapper = styled.div`
 
 const Title = styled.h2`
   font-size: 24px;
+  margin: 20px 0 0 0;
+  padding: 0;
 `;
 
 const Description = props => (
-  <p className='secondary-color'>{props.children}</p>
+  <p style={{margin: '12px 0 0 0', padding: '0'}} className='secondary-color'>{props.children}</p>
 )
 
 const Card = ({thumbnail}) => {
