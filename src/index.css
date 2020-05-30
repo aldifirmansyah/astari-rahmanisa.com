@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'worksans';
+  src: url('./assets/fonts/worksans.ttf');
+}
+
+@font-face {
+  font-family: 'assistant';
+  src: url('./assets/fonts/assistant.ttf');
+}

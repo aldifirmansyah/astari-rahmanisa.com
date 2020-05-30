@@ -1,9 +1,11 @@
 import React from 'react';
 import ThemeSwitch from './switch';
 import LogoLight from '../../assets/images/logo/light.svg';
+import LogoDark from '../../assets/images/logo/dark.svg';
 import Image from '../Image';
 import styled from 'styled-components';
 import {Link} from "react-router-dom";
+import DarkModeContext from '../../hooks/DarkModeContext';
 
 const HeaderWrapper = styled.header`
   height: 80px;
@@ -67,15 +69,16 @@ const NavItem = props => (
 )
 
 const Header = props => {
+  const {IsDarkMode} = React.useContext(DarkModeContext);
   const path = window.location.pathname;
 
   return (
     <HeaderWrapper>
-      <Link to='/'><Image src={LogoLight} alt='logo' width='40px' mobileWidth='24px'/></Link>
+      <Link to='/'><Image src={IsDarkMode ? LogoDark : LogoLight} alt='logo' width='40px' mobileWidth='24px'/></Link>
       <NavWrapper>
         <UlWrapper>
-          {header.map(item => (
-            <NavItem to={item.to} isActive={item.to === path}>
+          {header.map((item, idx) => (
+            <NavItem key={idx} to={item.to} isActive={item.to === path}>
               {item.name}
             </NavItem>
           ))}

@@ -9,6 +9,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import DarkModeContext from '../hooks/DarkModeContext';
 
 const Container = styled.div`
   margin: 0 auto;
@@ -24,19 +25,9 @@ const Container = styled.div`
 `;
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: 'worksans';
-    src: url('./assets/fonts/worksans.ttf');
-  }
-
-  @font-face {
-    font-family: 'assistant';
-    src: url('./assets/fonts/assistant.ttf');
-  }
-
   * {
     font-size: 14px;
-    font-family: 'Worksans', sans-serif;
+    font-family: 'worksans', sans-serif;
   }
   
   body {
@@ -48,7 +39,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .font-worksans {
-    font-family: 'Work Sans', sans-serif; 
+    font-family: 'worksans', sans-serif; 
   }
 
   .font-assistant {
@@ -71,26 +62,34 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+
+
 function App() {
+  const [_isDarkMode, _setIsDarkMode] = React.useState(true);
+  const SetIsDarkMode = (val) => {
+    _setIsDarkMode(val);
+  }
   return (
-    <ThemeProvider theme={{darkMode: false}}>
-      <GlobalStyle/>
-      <Router>
-        <Container>
-            <Switch>
-              <Route path="/about">
-                <Header/>
-                <About />
-              </Route>
-              <Route path="/">
-                <Header/>
-                <Work />
-              </Route>
-            </Switch>
-          <Footer/>
-        </Container>
-      </Router>
-    </ThemeProvider>
+    <DarkModeContext.Provider value={{IsDarkMode: _isDarkMode, SetIsDarkMode}}>
+      <ThemeProvider theme={{darkMode: _isDarkMode}}>
+        <GlobalStyle/>
+        <Router>
+          <Container>
+              <Switch>
+                <Route path="/about">
+                  <Header/>
+                  <About />
+                </Route>
+                <Route path="/">
+                  <Header/>
+                  <Work />
+                </Route>
+              </Switch>
+            <Footer/>
+          </Container>
+        </Router>
+      </ThemeProvider>
+    </DarkModeContext.Provider>
   );
 }
 

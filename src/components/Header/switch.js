@@ -1,8 +1,8 @@
-import React from 'react'
-import Styled from 'styled-components'
-
-import lightmodeImg from '../../assets/images/switch_background/light.png'
-import darkModeImg from '../../assets/images/switch_background/dark.png'
+import React from 'react';
+import Styled from 'styled-components';
+import lightmodeImg from '../../assets/images/switch_background/light.png';
+import darkModeImg from '../../assets/images/switch_background/dark.png';
+import DarkModeContext from '../../hooks/DarkModeContext';
 
 const DarkModeWrapper = Styled.div`
   display: flex;
@@ -24,7 +24,6 @@ const Switch = Styled.input`
   background-image: url(${lightmodeImg});
   background-size: 100% 100%;
   border-radius: 50px;
-  transition: 0.9s;
   &:before {
     content: '';
     position: absolute;
@@ -46,16 +45,18 @@ const Switch = Styled.input`
 `;
 
 const ThemeSwitch = () => {
-  const [darkMode, setIsDarkMode] = React.useState(false);
+  const {IsDarkMode, SetIsDarkMode} = React.useContext(DarkModeContext);
+  console.log('IS DARK MODE');
+  console.log(IsDarkMode);
 
   function toggleSwitch() {
-    setIsDarkMode(!darkMode);
+    SetIsDarkMode(!IsDarkMode);
   }
 
   return (
     <DarkModeWrapper>
-    <label className='primary-color'>{darkMode ? 'Dark Mode' : 'Light Mode'}</label>
-    <Switch type='checkbox' checked={darkMode} onChange={toggleSwitch}/>
+    <label className='primary-color'>{IsDarkMode ? 'Dark Mode' : 'Light Mode'}</label>
+    <Switch type='checkbox' checked={IsDarkMode} onChange={toggleSwitch}/>
     </DarkModeWrapper>
   )
 }

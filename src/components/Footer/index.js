@@ -1,7 +1,9 @@
-import React from 'react'
-import Styled from 'styled-components'
-import Image from '../Image'
-import LightEmail from '../../assets/images/email/light.png'
+import React from 'react';
+import Styled from 'styled-components';
+import Image from '../Image';
+import LightEmail from '../../assets/images/email/light.png';
+import DarkEmail from '../../assets/images/email/dark.png';
+import DarkModeContext from '../../hooks/DarkModeContext';
 
 const FooterWrapper = Styled.footer`
 margin: 0;
@@ -42,6 +44,7 @@ const DesktopOnlySpan = Styled.span`
 `;
 
 const Footer = () => {
+  const {IsDarkMode} = React.useContext(DarkModeContext);
   const year = '2020';
 
   return (
@@ -50,7 +53,7 @@ const Footer = () => {
       <ContentWrapper>
         <p>&copy; {year} Astari Dwi Rahmanisa</p>
         <EmailWrapper>
-          <Image src={LightEmail} height='100%'/>
+          <Image src={IsDarkMode ? DarkEmail : LightEmail} height='100%'/>
           <DesktopOnlySpan>Astari Dwi Rahmanisa</DesktopOnlySpan>
         </EmailWrapper>
       </ContentWrapper>
