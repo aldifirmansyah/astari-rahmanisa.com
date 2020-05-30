@@ -1,9 +1,9 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import lightmodeImg from '../../assets/images/switch_background/light.png';
 import darkModeImg from '../../assets/images/switch_background/dark.png';
 
-const DarkModeWrapper = Styled.div`
+const DarkModeWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -12,7 +12,7 @@ const DarkModeWrapper = Styled.div`
 
 const height = 20;
 const width = 40;
-const Switch = Styled.input`
+const Switch = styled.input`
   cursor: pointer;
   -webkit-appearance: none;
   outline: none;

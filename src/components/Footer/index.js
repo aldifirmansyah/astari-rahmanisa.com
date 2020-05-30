@@ -1,22 +1,22 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import Image from '../Image';
 import LightEmail from '../../assets/images/email/light.png';
 import DarkEmail from '../../assets/images/email/dark.png';
 
-const FooterWrapper = Styled.footer`
+const FooterWrapper = styled.footer`
 margin: 0;
 padding: 0;
 `;
 
-const Line = Styled.div`
+const Line = styled.div`
   margin: 0;
   padding: 0;
   width: 100%;
   height: 0;
 `;
 
-const ContentWrapper = Styled.div`
+const ContentWrapper = styled.div`
   margin: 0;
   padding: 0;
   display: flex;
@@ -25,7 +25,7 @@ const ContentWrapper = Styled.div`
   align-items: center;
 `;
 
-const EmailWrapper = Styled.div`
+const EmailWrapper = styled.div`
   height: 16px;
   display: flex;
   flex-direction: row;
@@ -35,7 +35,7 @@ const EmailWrapper = Styled.div`
   }
 `;
 
-const DesktopOnlySpan = Styled.span`
+const DesktopOnlySpan = styled.span`
   margin-left: 4px;
   @media (max-width: 768px) {
     display: none;

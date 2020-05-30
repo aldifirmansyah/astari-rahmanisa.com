@@ -1,16 +1,16 @@
 import React from "react"
-import Styled from 'styled-components'
+import styled from 'styled-components'
 
 const greetingText1 = `Hello! `;
 const greetingText2 = `I am Astari - an interface and experience designer from Bogor, Indonesia`;
 
-const GreetingWrapper = Styled.section`
+const GreetingWrapper = styled.section`
   width: 50%;
   @media (max-width: 768px) {
     width: 100%;
   }
 `;
-const GreetingHeading = Styled.h1`
+const GreetingHeading = styled.h1`
   font-size: 36px;
   display: inline;
   @media (max-width: 768px) {
