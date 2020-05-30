@@ -24,32 +24,10 @@ const Container = styled.div`
 `;
 
 const GlobalStyle = createGlobalStyle`
-  * {
-    font-size: 14px;
-    font-family: 'worksans', sans-serif;
-  }
-  
   body {
     background-color: ${(props) => (props.theme.darkMode ? '#0E0C16' : '#FFFFFF')};
     color: ${(props) => (props.theme.darkMode ? '#FFFFFF' : '#0E0C16')};
-    transition: 0.5s;
-    margin: 0;
-    padding: 0;
   }
-
-  .font-worksans {
-    font-family: 'worksans', sans-serif; 
-  }
-
-  .font-assistant {
-    font-family: 'assistant', sans-serif;
-    word-spacing: 4px;
-  }
-
-  .active-header {
-    color: #EF9DFD;
-  }
-
   .background-color {
     background-color: ${(props) => (props.theme.darkMode ? '#0E0C16' : '#FFFFFF')};
   }

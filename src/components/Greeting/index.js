@@ -14,11 +14,13 @@ const GreetingWrapper = styled.section`
 `;
 const GreetingHeading = styled.h1`
   font-size: 36px;
-  display: inline;
+  display: block;
+  margin: 0;
   @media (max-width: 768px) {
     font-size: 24px;
-    display: block;
-    margin: 0 32px 0 0;
+    margin-right: 32px;
+    transition: 0.5s;
+    transition-timing-function: linear;
   }
 `;
 

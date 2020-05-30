@@ -7,3 +7,28 @@
   font-family: 'assistant';
   src: url('./assets/fonts/assistant.ttf');
 }
+
+* {
+  font-size: 14px;
+  font-family: 'worksans', sans-serif;
+}
+
+body {
+  transition: 0.5s;
+  transition-timing-function: linear;
+  margin: 0;
+  padding: 0;
+}
+
+.font-worksans {
+  font-family: 'worksans', sans-serif; 
+}
+
+.font-assistant {
+  font-family: 'assistant', sans-serif;
+  word-spacing: 4px;
+}
+
+.active-header {
+  color: #EF9DFD;
+}

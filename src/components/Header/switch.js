@@ -34,6 +34,7 @@ const Switch = styled.input`
     border-radius: 50px;
     background-color: #ffffff;
     transition: 0.5s;
+    transition-timing-function: linear;
   }
   &:checked {
     background-image: url(${darkModeImg});

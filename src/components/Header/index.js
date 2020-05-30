@@ -21,12 +21,15 @@ const HeaderWrapper = styled.header`
 `;
 
 const NavWrapper = styled.nav`
+  transition: 0.5s;
+  transition-timing-function: linear;
   flex-grow: 1;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   @media (max-width: 768px) {
     transition: 0.5s;
+    transition-timing-function: linear;
     position: fixed;
     top: 0;
     left: 0;
@@ -41,12 +44,12 @@ const NavWrapper = styled.nav`
 `;
 
 const UlWrapper = styled.ul`
-  flex-grow: 1;
   list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
   @media (max-width: 768px) {
+    flex-grow: 1;
     padding: 0 48px;
     flex-direction: column;
     justify-content: center;
