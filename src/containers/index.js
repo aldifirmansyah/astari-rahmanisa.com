@@ -67,9 +67,6 @@ function App() {
   const [_isDarkMode, _setIsDarkMode] = React.useState(false);
   
   function toggleDarkMode(val) {
-    console.log('TOGGLE DARK MODE');
-    console.log(_isDarkMode);
-    console.log(val);
     _setIsDarkMode(val);
   }
   return (
