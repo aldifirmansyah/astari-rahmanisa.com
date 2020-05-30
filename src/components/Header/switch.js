@@ -43,19 +43,15 @@ const Switch = Styled.input`
   }
 `;
 
-const ThemeSwitch = () => {
-  const [IsDarkMode, SetIsDarkMode] = React.useState(false);
-  console.log('IS DARK MODE');
-  console.log(IsDarkMode);
-
+const ThemeSwitch = props => {
   function toggleSwitch() {
-    SetIsDarkMode(!IsDarkMode);
+    props.setDarkMode(!props.isDarkMode);
   }
 
   return (
     <DarkModeWrapper>
-    <label className='primary-color'>{IsDarkMode ? 'Dark Mode' : 'Light Mode'}</label>
-    <Switch type='checkbox' checked={IsDarkMode} onChange={toggleSwitch}/>
+    <label className='primary-color'>{props.isDarkMode ? 'Dark Mode' : 'Light Mode'}</label>
+    <Switch type='checkbox' checked={props.isDarkMode} onChange={toggleSwitch}/>
     </DarkModeWrapper>
   )
 }

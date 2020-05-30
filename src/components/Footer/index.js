@@ -42,7 +42,7 @@ const DesktopOnlySpan = Styled.span`
   }
 `;
 
-const Footer = () => {
+const Footer = props => {
   const year = '2020';
 
   return (
@@ -51,7 +51,7 @@ const Footer = () => {
       <ContentWrapper>
         <p>&copy; {year} Astari Dwi Rahmanisa</p>
         <EmailWrapper>
-          <Image src={LightEmail} height='100%'/>
+          <Image src={props.isDarkMode ? DarkEmail : LightEmail} height='100%'/>
           <DesktopOnlySpan>Astari Dwi Rahmanisa</DesktopOnlySpan>
         </EmailWrapper>
       </ContentWrapper>

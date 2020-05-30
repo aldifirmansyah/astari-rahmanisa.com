@@ -65,7 +65,8 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   const [_isDarkMode, _setIsDarkMode] = React.useState(false);
-  const SetIsDarkMode = (val) => {
+  
+  function toggleDarkMode(val) {
     _setIsDarkMode(val);
   }
   return (
@@ -75,15 +76,15 @@ function App() {
           <Container>
               <Switch>
                 <Route path="/about">
-                  <Header/>
+                  <Header isDarkMode={_isDarkMode} setDarkMode={toggleDarkMode}/>
                   <About />
                 </Route>
                 <Route path="/">
-                  <Header/>
+                  <Header isDarkMode={_isDarkMode} setDarkMode={toggleDarkMode}/>
                   <Work />
                 </Route>
               </Switch>
-            <Footer/>
+            <Footer isDarkMode={_isDarkMode}/>
           </Container>
         </Router>
       </ThemeProvider>

@@ -72,7 +72,7 @@ const Header = props => {
 
   return (
     <HeaderWrapper>
-      <Link to='/'><Image src={LogoLight} alt='logo' width='40px' mobileWidth='24px'/></Link>
+      <Link to='/'><Image src={props.isDarkMode ? LogoDark : LogoLight} alt='logo' width='40px' mobileWidth='24px'/></Link>
       <NavWrapper>
         <UlWrapper>
           {header.map((item, idx) => (
@@ -81,7 +81,7 @@ const Header = props => {
             </NavItem>
           ))}
           <LiStyled>
-            <ThemeSwitch/>
+            <ThemeSwitch isDarkMode={props.isDarkMode} setDarkMode={props.setDarkMode}/>
           </LiStyled>
         </UlWrapper>
         </NavWrapper>
