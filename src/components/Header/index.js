@@ -4,7 +4,7 @@ import LogoLight from '../../assets/images/logo/light.svg';
 import LogoDark from '../../assets/images/logo/dark.svg';
 import Image from '../Image';
 import styled from 'styled-components';
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 
 const HeaderWrapper = styled.header`
   height: 80px;
@@ -68,7 +68,14 @@ const NavItem = props => (
 )
 
 const Header = props => {
-  const path = window.location.pathname;
+  const [path, setPath] = React.useState('/');
+  const history = useHistory();
+
+  React.useEffect(() => {
+    return history.listen((location) => {
+      setPath(location.pathname);
+    })
+  },[history])
 
   return (
     <HeaderWrapper>

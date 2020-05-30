@@ -77,16 +77,15 @@ function App() {
         <GlobalStyle/>
         <Router>
           <Container>
-              <Switch>
-                <Route path="/about">
-                  <Header isDarkMode={_isDarkMode} setDarkMode={toggleDarkMode}/>
-                  <About />
-                </Route>
-                <Route path="/">
-                  <Header isDarkMode={_isDarkMode} setDarkMode={toggleDarkMode}/>
-                  <Work />
-                </Route>
-              </Switch>
+            <Header isDarkMode={_isDarkMode} setDarkMode={toggleDarkMode}/>
+            <Switch>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/">
+                <Work />
+              </Route>
+            </Switch>
             <Footer isDarkMode={_isDarkMode}/>
           </Container>
         </Router>
