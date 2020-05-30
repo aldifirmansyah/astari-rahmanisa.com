@@ -45,9 +45,9 @@ const NavWrapper = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  transition: 0.5s;
+  transition-timing-function: linear;
   @media (max-width: 768px) {
-    transition: 0.5s;
-    transition-timing-function: linear;
     position: fixed;
     top: 0;
     left: 0;
