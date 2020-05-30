@@ -11,18 +11,36 @@ import styled from 'styled-components';
 import {Link, useHistory} from "react-router-dom";
 
 const HeaderWrapper = styled.header`
+  transition: 0.5s;
+  transition-timing-function: linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 80px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
+  z-index: 999;
   @media (max-width: 768px) {
     height: 56px;
   }
 `;
 
+const CenterDiv = styled.div`
+  width: 100%;
+  max-width: 1000px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media (max-width: 768px) {
+    margin: 0 24px;
+  }
+`;
+
 const NavWrapper = styled.nav`
-  transition: 0.5s;
-  transition-timing-function: linear;
   flex-grow: 1;
   display: flex;
   flex-direction: row;
@@ -108,9 +126,9 @@ const NavItem = props => (
 )
 
 const Header = props => {
-  const [path, setPath] = React.useState('/');
-  const [isNavigationOpen, setIsNavigationOpen] = React.useState(false);
   const history = useHistory();
+  const [path, setPath] = React.useState(history.location.pathname);
+  const [isNavigationOpen, setIsNavigationOpen] = React.useState(false);
 
   React.useEffect(() => {
     return history.listen((location) => {
@@ -138,22 +156,24 @@ const Header = props => {
   }
 
   return (
-    <HeaderWrapper>
-      <Link to='/'><Image src={props.isDarkMode ? LogoDark : LogoLight} alt='logo' width='40px' mobileWidth='24px'/></Link>
-      <BurgerMenuWrapper onClick={openNavigation}><Image src={props.isDarkMode ? DarkBurgerIcon : LightBurgerIcon} width={'24px'}/></BurgerMenuWrapper>
-      <NavWrapper isMobileNavVisible={isNavigationOpen} className='background-color'>
-        <BurgerCloseWrapper onClick={closeNavigation}><Image src={props.isDarkMode ? DarkBurgerClose : LightBurgerClose} /></BurgerCloseWrapper>
-        <UlWrapper>
-          {header.map((item, idx) => (
-            <NavItem key={idx} to={item.to} isActive={item.to === path}>
-              {item.name}
-            </NavItem>
-          ))}
-          <LiStyled>
-            <ThemeSwitch isDarkMode={props.isDarkMode} setDarkMode={props.setDarkMode}/>
-          </LiStyled>
-        </UlWrapper>
-        </NavWrapper>
+    <HeaderWrapper className='background-color'>
+      <CenterDiv>
+        <Link to='/'><Image src={props.isDarkMode ? LogoDark : LogoLight} alt='logo' width='40px' mobileWidth='24px'/></Link>
+        <BurgerMenuWrapper onClick={openNavigation}><Image src={props.isDarkMode ? DarkBurgerIcon : LightBurgerIcon} width={'24px'}/></BurgerMenuWrapper>
+        <NavWrapper isMobileNavVisible={isNavigationOpen} className='background-color'>
+          <BurgerCloseWrapper onClick={closeNavigation}><Image src={props.isDarkMode ? DarkBurgerClose : LightBurgerClose} /></BurgerCloseWrapper>
+          <UlWrapper>
+            {header.map((item, idx) => (
+              <NavItem key={idx} to={item.to} isActive={item.to === path}>
+                {item.name}
+              </NavItem>
+            ))}
+            <LiStyled>
+              <ThemeSwitch isDarkMode={props.isDarkMode} setDarkMode={props.setDarkMode}/>
+            </LiStyled>
+          </UlWrapper>
+          </NavWrapper>
+        </CenterDiv>
     </HeaderWrapper>
   )
 }
