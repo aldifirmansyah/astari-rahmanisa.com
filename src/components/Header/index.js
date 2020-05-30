@@ -2,6 +2,10 @@ import React from 'react';
 import ThemeSwitch from './switch';
 import LogoLight from '../../assets/images/logo/light.svg';
 import LogoDark from '../../assets/images/logo/dark.svg';
+import LightBurgerIcon from '../../assets/images/burger_menu/light.svg';
+import DarkBurgerIcon from '../../assets/images/burger_menu/dark.svg';
+import LightBurgerClose from '../../assets/images/burger_close/light.svg';
+import DarkBurgerClose from '../../assets/images/burger_close/dark.svg';
 import Image from '../Image';
 import styled from 'styled-components';
 import {Link, useHistory} from "react-router-dom";
@@ -21,9 +25,23 @@ const NavWrapper = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  @media (max-width: 768px) {
+    transition: 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    ${props => props.isMobileNavVisible ? null : 'transform: translateX(100%);'}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
 `;
 
 const UlWrapper = styled.ul`
+  flex-grow: 1;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -50,6 +68,25 @@ const LinkStyled = styled(Link)`
   text-decoration: none;
 `;
 
+const BurgerMenuWrapper = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: initial;
+    flex-grow: 1;
+    text-align: right;
+  }
+`;
+
+const BurgerCloseWrapper = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: initial;
+    text-align: right;
+    margin-left: auto;
+    padding: 1.5rem 2rem;
+  }
+`;
+
 const header = [
   {
     to: '/',
@@ -69,18 +106,40 @@ const NavItem = props => (
 
 const Header = props => {
   const [path, setPath] = React.useState('/');
+  const [isNavigationOpen, setIsNavigationOpen] = React.useState(false);
   const history = useHistory();
 
   React.useEffect(() => {
     return history.listen((location) => {
+      closeNavigation();
       setPath(location.pathname);
     })
-  },[history])
+  },[history]);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      closeNavigation();
+    }, 500);
+
+    return () => {
+      clearTimeout(timer);
+    }
+  }, [props.isDarkMode])
+
+  const openNavigation = () => {
+    setIsNavigationOpen(true);
+  }
+
+  const closeNavigation = () => {
+    setIsNavigationOpen(false);
+  }
 
   return (
     <HeaderWrapper>
       <Link to='/'><Image src={props.isDarkMode ? LogoDark : LogoLight} alt='logo' width='40px' mobileWidth='24px'/></Link>
-      <NavWrapper>
+      <BurgerMenuWrapper onClick={openNavigation}><Image src={props.isDarkMode ? DarkBurgerIcon : LightBurgerIcon} width={'24px'}/></BurgerMenuWrapper>
+      <NavWrapper isMobileNavVisible={isNavigationOpen} className='background-color'>
+        <BurgerCloseWrapper onClick={closeNavigation}><Image src={props.isDarkMode ? DarkBurgerClose : LightBurgerClose} /></BurgerCloseWrapper>
         <UlWrapper>
           {header.map((item, idx) => (
             <NavItem key={idx} to={item.to} isActive={item.to === path}>
