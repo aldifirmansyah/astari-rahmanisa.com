@@ -25,7 +25,8 @@ const ContentWrapper = styled.div`
   align-items: center;
 `;
 
-const EmailWrapper = styled.div`
+const EmailWrapper = styled.a`
+  text-decoration: none;
   height: 16px;
   display: flex;
   flex-direction: row;
@@ -50,7 +51,7 @@ const Footer = props => {
       <Line style={{border: `0.4px solid ${'#6B6E8C'}`}}/>
       <ContentWrapper>
         <p>&copy; {year} Astari Dwi Rahmanisa</p>
-        <EmailWrapper>
+        <EmailWrapper href="mailto: astaridwir@gmail.com" className='color-primary'>
           <Image src={props.isDarkMode ? DarkEmail : LightEmail} height='100%'/>
           <DesktopOnlySpan>Astari Dwi Rahmanisa</DesktopOnlySpan>
         </EmailWrapper>
