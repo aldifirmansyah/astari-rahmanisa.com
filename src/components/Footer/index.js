@@ -53,7 +53,7 @@ const Footer = props => {
         <p>&copy; {year} Astari Dwi Rahmanisa</p>
         <EmailWrapper href="mailto: astaridwir@gmail.com" className='color-primary'>
           <Image src={props.isDarkMode ? DarkEmail : LightEmail} height='100%'/>
-          <DesktopOnlySpan>Astari Dwi Rahmanisa</DesktopOnlySpan>
+          <DesktopOnlySpan>astaridwir@gmail.com</DesktopOnlySpan>
         </EmailWrapper>
       </ContentWrapper>
     </FooterWrapper>
