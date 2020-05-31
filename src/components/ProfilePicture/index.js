@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ImageWithSkeleon from '../ImageWithSkeleton';
 import Picture from '../../assets/images/profile/image.jpg';
-import Skeleton from '../../assets/images/profile/image_skeleton.jpg';
+import Skeleton from '../../assets/images/profile/skeleton.jpg';
 
 const PictureContainer = styled.section`
   width: 100%;
