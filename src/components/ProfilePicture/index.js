@@ -11,7 +11,7 @@ const PictureContainer = styled.section`
 
 const ProfilePicture = () => (
   <PictureContainer>
-    <ImageWithSkeleon width='100%' src={Picture} skeletin={Skeleton}/>
+    <ImageWithSkeleon width='100%' src={Picture} skeleton={Skeleton}/>
   </PictureContainer>
 )
 
