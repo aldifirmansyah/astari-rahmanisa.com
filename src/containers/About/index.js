@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SEO from '../../components/seo';
 import ProfilePicture from '../../components/ProfilePicture';
+import AboutMe from '../../components/AboutMe';
 
 const SubContainer = styled.div`
   margin: 0 120px;
@@ -15,6 +16,7 @@ const About = () => {
     <SubContainer>
     <SEO title='About'/>
     <ProfilePicture/>
+    <AboutMe/>
     </SubContainer>
   )
 }
