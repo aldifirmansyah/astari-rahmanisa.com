@@ -1,22 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import {TitleStyled, ParagraphStyled} from '../TextStyled';
 
 const AboutMeWrapper = styled.section`
   margin: 80px 0 0 0;
-`;
-const TitleStyled = styled.h2`
-  font-size: 24px;
-`;
-
-const ParagraphStyled = styled.p`
-  text-align: justify;
-  line-height: 30px;
-  font-weight: lighter;
-`;
-
-const SpanAsLink = styled.span`
-  text-decoration: underline;
-  cursor: pointer;
 `;
 
 const Title = () => (<TitleStyled className='font-assistant'>About Me</TitleStyled>)
@@ -26,6 +13,11 @@ Currently, I am in my final year as an undergraduate student of Information Syst
 Universitas Indonesia. Throughout my experience as a designer, I have collaborated with talented and passionate people 
 to deliver an appealing yet easy to use products. Most recently, I worked on digital product which related to online grocery shopping.`;
 const Description = () => (<ParagraphStyled>{DescriptionText}</ParagraphStyled>)
+
+const SpanAsLink = styled.span`
+  text-decoration: underline;
+  cursor: pointer;
+`;
 
 const Link = props => <SpanAsLink className='active-header' onClick={props.onClick}>{props.children}</SpanAsLink>
 

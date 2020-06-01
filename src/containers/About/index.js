@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SEO from '../../components/seo';
 import ProfilePicture from '../../components/ProfilePicture';
-import AboutMe from '../../components/AboutMe';
+import AboutMe from '../../components/AboutContent/AboutMe';
 
 const SubContainer = styled.div`
   margin: 0 120px;
