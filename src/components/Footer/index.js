@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from '../Image';
-import LightEmail from '../../assets/images/email/light.png';
-import DarkEmail from '../../assets/images/email/dark.png';
+import LightEmail from '../../assets/images/email/light.svg';
+import DarkEmail from '../../assets/images/email/dark.svg';
 
 const FooterWrapper = styled.footer`
 margin: 0;
