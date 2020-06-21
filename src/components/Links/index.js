@@ -35,7 +35,7 @@ const Links = props => {
   }
   
   function  openBehance() {
-    window.open('https://www.behance.net/astaridwir', '_blank');
+    window.open('https://www.behance.net/astari-rahmanisa', '_blank');
   }
   
   function openVsco() {
