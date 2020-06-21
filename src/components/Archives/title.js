@@ -44,7 +44,7 @@ const DesktopTitle = () => {
     <DesktopTitleWrapper>
       <div>
         <Heading className='font-assistant'>Archives</Heading>
-        <Paragraph>Other example of my work 🎨</Paragraph>
+        <Paragraph>Other example of my work <span role='img' aria-label='art'>🎨</span></Paragraph>
       </div>
     </DesktopTitleWrapper>
   )
@@ -55,7 +55,7 @@ const MobileTitle = () => {
     <MobileTitleWrapper>
       <div>
         <Heading className='font-assistant'>Archives</Heading>
-        <Paragraph>Other example of my work 🎨</Paragraph>
+        <Paragraph>Other example of my work <span role='img' aria-label='art'>🎨</span></Paragraph>
       </div>
     </MobileTitleWrapper>
   )
