@@ -18,7 +18,7 @@ const Title = styled.h2`
 `;
 
 const Description = props => (
-  <p style={{margin: '12px 0 0 0', padding: '0', fontWeight: 'lighter'}} className='color-secondary'>{props.children}</p>
+  <p style={{margin: '12px 0 0 0', padding: '0', fontWeight: 'lighter', textAlign: 'justify'}} className='color-secondary'>{props.children}</p>
 )
 
 const Card = ({thumbnail}) => {
