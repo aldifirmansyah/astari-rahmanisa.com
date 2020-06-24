@@ -7,18 +7,22 @@ const Wrapper = styled.div`
   &:nth-child(2) {
     margin-top: 28px;
   }
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 `;
 
 const Title = styled.h3`
   font-size: 16px;
+  line-height: 19px;
   font-weight: bold;
   margin: 0;
 `;
 
 const Date = styled.p`
   font-size: 12px;
+  line-height: 14px;
   font-weight: lighter;
-  margin: 4px 0 0 0;
 `;
 
 const Experience = ({experience}) => (
