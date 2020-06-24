@@ -51,7 +51,7 @@ const ThemeSwitch = props => {
 
   return (
     <DarkModeWrapper>
-    <label className='primary-color'>{props.isDarkMode ? 'Dark Mode' : 'Light Mode'}</label>
+    <label className='color-primary'>{props.isDarkMode ? 'Dark Mode' : 'Light Mode'}</label>
     <Switch type='checkbox' checked={props.isDarkMode} onChange={toggleSwitch}/>
     </DarkModeWrapper>
   )
