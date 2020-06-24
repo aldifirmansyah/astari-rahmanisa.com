@@ -9,7 +9,6 @@ const DarkModeWrapper = styled.div`
   align-items: center;
   width: 134px;
 `;
-
 const height = 20;
 const width = 40;
 const Switch = styled.input`
