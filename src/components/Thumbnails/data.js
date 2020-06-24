@@ -8,7 +8,7 @@ const data = [
     photo: tjetakKnowledgePhoto,
     skeleton: tjetakKnowledgeSkeleton,
     title: 'Tjetak Knowledge',
-    description: 'Tjetak Knowledge is a Knowledge Management System designed for the entire company of Tjetak',
+    description: 'Tjetak Knowledge is a Knowledge Management System designed for the entire company of Tjetak.',
     createdDate: 'May 3rd, 2020'
   },
   {
