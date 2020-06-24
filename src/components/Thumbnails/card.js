@@ -7,18 +7,31 @@ const CardWrapper = styled.div`
   margin-top: 56px;
   @media (max-width: 768px) {
     width: 100%;
-    margin-top: 28px;
+    margin-top: 32px;
   }
 `;
 
 const Title = styled.h2`
   font-size: 24px;
-  margin: 20px 0 0 0;
+  margin: 12px 0 0 0;
   padding: 0;
 `;
 
+const StyledParagraph = styled.p`
+  margin: 12px 0 0 0;
+  padding: 0;
+  font-weight: lighter;
+  text-align: justify;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  line-height: 140%;
+  max-height: 2.8rem;
+  overflow: hidden;
+`;
+
+
 const Description = props => (
-  <p style={{margin: '12px 0 0 0', padding: '0', fontWeight: 'lighter', textAlign: 'justify'}} className='color-secondary'>{props.children}</p>
+  <StyledParagraph className='color-secondary'>{props.children}</StyledParagraph>
 )
 
 const Card = ({thumbnail}) => {
