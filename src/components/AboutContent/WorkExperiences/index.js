@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {TitleStyled} from '../TextStyled';
+import {TitleStyled} from '../../TextStyled';
 import data from './data';
 import Experience from './experience';
 

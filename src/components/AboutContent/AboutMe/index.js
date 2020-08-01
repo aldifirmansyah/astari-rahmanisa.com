@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {TitleStyled, ParagraphStyled} from '../TextStyled';
+import {TitleStyled, ParagraphStyled} from '../../TextStyled';
 
 const AboutMeWrapper = styled.section`
   margin: 80px 0 0 0;

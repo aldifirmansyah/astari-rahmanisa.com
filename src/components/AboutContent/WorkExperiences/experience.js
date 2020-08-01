@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {ParagraphStyled} from '../TextStyled';
+import {ParagraphStyled} from '../../TextStyled';
 
 const Wrapper = styled.div`
   margin: 40px 0 0 0;
