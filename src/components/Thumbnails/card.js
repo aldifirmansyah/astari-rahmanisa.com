@@ -36,12 +36,12 @@ const Description = props => (
 
 const Card = ({thumbnail}) => {
   return (
-  <CardWrapper>
-    <ImageWithSkeleton width='100%' src={thumbnail.photo} skeleton={thumbnail.skeleton} useHover={true}/>
-    <Title className='font-assistant'>{thumbnail.title}</Title>
-    <Description>{thumbnail.description}</Description>
-    <Description>{thumbnail.createdDate}</Description>
-  </CardWrapper>
+    <CardWrapper onClick={() => { window.location.href=thumbnail.to }}>
+      <ImageWithSkeleton width='100%' src={thumbnail.photo} skeleton={thumbnail.skeleton} useHover={true}/>
+      <Title className='font-assistant'>{thumbnail.title}</Title>
+      <Description>{thumbnail.description}</Description>
+      <Description>{thumbnail.createdDate}</Description>
+    </CardWrapper>
   )
 }
 

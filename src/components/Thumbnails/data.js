@@ -7,6 +7,7 @@ const data = [
   {
     photo: tjetakKnowledgePhoto,
     skeleton: tjetakKnowledgeSkeleton,
+    to: '/tjetak-knowledge',
     title: 'Tjetak Knowledge',
     description: 'Tjetak Knowledge is a Knowledge Management System designed for the entire company of Tjetak.',
     createdDate: 'May 3rd, 2020'
@@ -14,6 +15,7 @@ const data = [
   {
     photo: bogorSehatPhoto,
     skeleton: bogorSehatSkeleton,
+    to: '/bogorsehat',
     title: 'Bogor Sehat',
     description: 'To help Indonesia enhance their health quality, my team and I designed a mobile health application for citizen of Bogor.',
     createdDate: 'November 22nd, 2019'
