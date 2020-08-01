@@ -7,6 +7,11 @@ const ImageStyled = styled.img`
   filter: ${props => props.filter};
   ${props => props.clipPath ? `clip-path: ${props.clipPath};` : ''}
   display: ${props => props.display};
+  ${props => props.isBanner ? `
+  position: absolute;
+  left: 0;
+  width: 100vw!important;
+  ` : ''}
   @media (max-width: 768px) {
     width: ${props => props.mobileWidth ? props.mobileWidth : props.width};
     heigth: ${props => props.mobileHeight ? props.mobileHeight : props.height};
@@ -29,7 +34,7 @@ const Image = props => {
             width={width} height={height} filter={filter}
             mobileWidth={props.mobileWidth} mobileHeight={props.mobileHeight}
             clipPath={props.clipPath} display={display}
-            useHover={props.useHover}
+            useHover={props.useHover} isBanner={props.isBanner}
             onLoad={props.onLoad}
             onError={props.onError}
             />)
