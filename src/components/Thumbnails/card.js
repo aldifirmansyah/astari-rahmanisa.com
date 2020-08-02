@@ -5,6 +5,7 @@ import ImageWithSkeleton from '../ImageWithSkeleton'
 const CardWrapper = styled.div`
   width: 49%;
   margin-top: 56px;
+  overflow: hidden;
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 32px;
