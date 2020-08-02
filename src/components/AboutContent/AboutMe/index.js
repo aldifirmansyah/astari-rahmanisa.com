@@ -6,7 +6,7 @@ const AboutMeWrapper = styled.section`
   margin: 80px 0 0 0;
 `;
 
-const Title = () => (<TitleStyled className='font-assistant'>About Me</TitleStyled>)
+const Title = () => (<TitleStyled>About Me</TitleStyled>)
 
 const DescriptionText = `Hello again! My name is Astari Dwi Rahmanisa, a UI/UX Designer from Indonesia. 
 Currently, I am in my final year as an undergraduate student of Information System at Faculty of Computer Science, 

@@ -7,12 +7,13 @@ import ImageWithSkeleton from '../../components/ImageWithSkeleton';
 import Banner from '../../assets/images/tjetak_knowledge/banner/image.png';
 import BannerSkeleton from '../../assets/images/tjetak_knowledge/banner/skeleton.png';
 
-import { MainTitle, TitleStyled, H3Styled, ParagraphStyled, ListStyled, PrototypeLink, NextArticleLink } from '../../components/TextStyled';
+import { MainTitle, MainTitleParagraph, TitleStyled, SubTitle, ParagraphStyled, ListStyled, PrototypeLink, OtherArticleLink } from '../../components/TextStyled';
 
 const SubContainer = styled.div`
   margin: 160px 120px 80px 120px;
   @media (max-width: 768px) {
     margin: 0;
+    padding-top: 96px;
   }
 `;
 
@@ -22,7 +23,7 @@ const TjetakKnowledge = () => {
     <SubContainer>
       <SEO title='Tjetak Knowledge' />
       <MainTitle>Tjetak Knowledge</MainTitle>
-      <ParagraphStyled>A dedicated Knowledge Management System for Tjetak</ParagraphStyled>
+      <MainTitleParagraph>A dedicated Knowledge Management System for Tjetak</MainTitleParagraph>
 
       <br/>
       <br/>
@@ -45,20 +46,20 @@ const TjetakKnowledge = () => {
       <TitleStyled>Interface Design <span role='img' aria-label='design'>🔮</span></TitleStyled>
       <ParagraphStyled>Tjetak Knowledge designed as a web-based system so that Tjetak employees can access the system easily. Members responsible for creating Tjetak Knowledge interface design and flow were me and my teammate, Deana, then we split the task based on features. I was responsible for creating the design system, interface design for Home Page, Discussion Forum, and Best Practice Database. However, we also collaborated in designing Login Page and About Company.</ParagraphStyled>
 
-      <H3Styled>Login</H3Styled>
+      <SubTitle>Login</SubTitle>
       <ParagraphStyled>Me and Deana were responsible for creating the Login Page. We did a little bit of exploration in designing the interface.</ParagraphStyled>
       
-      <H3Styled>Home</H3Styled>
+      <SubTitle>Home</SubTitle>
       
-      <H3Styled>Discussion Forum</H3Styled>
+      <SubTitle>Discussion Forum</SubTitle>
       <ParagraphStyled>Here are some functionalities supported by Best Practice Database feature.</ParagraphStyled>
       <ListStyled lineHeight='260%' data={['Employee can manage (create, update, delete) their own topics in Discussion Forum.', 'Employee can manage (create, update, delete) their own comments in Discussion Forum.']}/>
 
-      <H3Styled>Best Practice Database</H3Styled>
+      <SubTitle>Best Practice Database</SubTitle>
       <ParagraphStyled>Here are some functionalities supported by Best Practice Database feature.</ParagraphStyled>
       <ListStyled lineHeight='260%' data={['Employee can manage (create, update, delete) their own Best Practice.', 'Manager can approve or reject a Best Practice (before it appears on the system).']}/>
 
-      <H3Styled>About Company</H3Styled>
+      <SubTitle>About Company</SubTitle>
       <ParagraphStyled>Here are some functionalities supported by About Company feature.</ParagraphStyled>
       <ListStyled lineHeight='260%' data={['Employee can read all company information.']}/>
 
@@ -67,7 +68,7 @@ const TjetakKnowledge = () => {
       <PrototypeLink link='https://www.figma.com/proto/ViE44CHbdAPLNGgMzfEhjn/Tjetak-Knowledge?node-id=171%3A1666&viewport=283%2C147%2C0.11311198770999908&scaling=min-zoom'>Try Tjetak Knowledge Prototype for Manager &#8594;</PrototypeLink>
     
     </SubContainer>
-    <NextArticleLink to='/bogorsehat'>BogorSehat &#x25B8;</NextArticleLink>
+    <OtherArticleLink nextLink='/bogorsehat' nextText='BogorSehat &#x25B8;'/>
     </>
   )
 }
