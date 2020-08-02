@@ -4,8 +4,8 @@ import SEO from '../../components/seo';
 
 import ImageWithSkeleton from '../../components/ImageWithSkeleton';
 
-import Banner from '../../assets/images/tjetak_knowledge/banner/image.png';
-import BannerSkeleton from '../../assets/images/tjetak_knowledge/banner/skeleton.png';
+import Banner from '../../assets/images/bogorsehat/banner/image.png';
+import BannerSkeleton from '../../assets/images/bogorsehat/banner/skeleton.png';
 
 import { MainTitle, TitleStyled, H3Styled, ParagraphStyled, ListStyled, PrototypeLink, NextArticleLink } from '../../components/TextStyled';
 
@@ -16,21 +16,21 @@ const SubContainer = styled.div`
   }
 `;
 
-const TjetakKnowledge = () => {
+const Bogorsehat = () => {
   return (
     <>
     <SubContainer>
-      <SEO title='Tjetak Knowledge' />
-      <MainTitle>Tjetak Knowledge</MainTitle>
-      <ParagraphStyled>A dedicated Knowledge Management System for Tjetak</ParagraphStyled>
+      <SEO title='Bogor Sehat' />
+      <MainTitle>Bogor Sehat</MainTitle>
+      <ParagraphStyled>A mobile health application for citizen of Bogor, Indonesia</ParagraphStyled>
 
       <br/>
       <br/>
 
       <ImageWithSkeleton isBanner={true} src={Banner} skeleton={BannerSkeleton}/>
 
-      <TitleStyled>About Tjetak Knowledge</TitleStyled>
-      <ListStyled lineHeight='38px' data={['Work Type: College Project', 'Year: 2020', 'Tools: Figma', 'Role: UI/UX Designer', 'Teams: 4 Members (Astari D. Rahmanisa, Ananda Daffa, Deana A. Putri, Yuvitri Annisa D.)']}/>
+      <TitleStyled>About BogorSehat</TitleStyled>
+      {/* <ListStyled lineHeight='38px' data={['Work Type: College Project', 'Year: 2020', 'Tools: Figma', 'Role: UI/UX Designer', 'Teams: 4 Members (Astari D. Rahmanisa, Ananda Daffa, Deana A. Putri, Yuvitri Annisa D.)']}/>
 
       <TitleStyled>Background</TitleStyled>
       <ParagraphStyled>Currently, many companies still have some limitations in terms of knowledge management practices. Majorities of case studies I have read stated that the limitation is mostly due to knowledge that remains tacit and has not been documented yet. Thus, my team tried to analyze knowledge management practices in a certain company. Then, based on the analysis, we proposed a recommendation to enhance their knowledge management practices in the form of a Knowledge Management System design.</ParagraphStyled>
@@ -64,12 +64,12 @@ const TjetakKnowledge = () => {
 
       <TitleStyled>Prototype</TitleStyled>
       <PrototypeLink link='https://www.figma.com/proto/ViE44CHbdAPLNGgMzfEhjn/Tjetak-Knowledge?node-id=52%3A143&viewport=-2151%2C-1047%2C0.23472565412521362&scaling=min-zoom'>Try Tjetak Knowledge Prototype for Employee &#8594;</PrototypeLink>
-      <PrototypeLink link='https://www.figma.com/proto/ViE44CHbdAPLNGgMzfEhjn/Tjetak-Knowledge?node-id=171%3A1666&viewport=283%2C147%2C0.11311198770999908&scaling=min-zoom'>Try Tjetak Knowledge Prototype for Manager &#8594;</PrototypeLink>
+      <PrototypeLink link='https://www.figma.com/proto/ViE44CHbdAPLNGgMzfEhjn/Tjetak-Knowledge?node-id=171%3A1666&viewport=283%2C147%2C0.11311198770999908&scaling=min-zoom'>Try Tjetak Knowledge Prototype for Manager &#8594;</PrototypeLink> */}
     
     </SubContainer>
-    <NextArticleLink to='/bogorsehat'>BogorSehat &#x25B8;</NextArticleLink>
+    {/* <NextArticleLink to='/bogorsehat'>BogorSehat &#x25B8;</NextArticleLink> */}
     </>
   )
 }
 
-export default TjetakKnowledge;
+export default Bogorsehat;

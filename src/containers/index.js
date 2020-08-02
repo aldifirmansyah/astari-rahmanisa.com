@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Work from './Work';
 import About from './About';
 import TjetakKnowledge from './TjetakKnowledge';
+import Bogorsehat from './Bogorsehat';
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
 import {
   BrowserRouter as Router,
@@ -55,6 +56,9 @@ function App() {
           <Container>
             <Header isDarkMode={_isDarkMode} setDarkMode={toggleDarkMode}/>
             <Switch>
+              <Route path='/bogorsehat'>
+              <Bogorsehat/>
+              </Route>
               <Route path="/tjetak-knowledge">
                 <TjetakKnowledge/>
               </Route>
