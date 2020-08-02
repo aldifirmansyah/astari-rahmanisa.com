@@ -45,8 +45,6 @@ const TjetakKnowledge = () => {
       <TitleStyled>Interface Design <span role='img' aria-label='design'>🔮</span></TitleStyled>
       <ParagraphStyled>Tjetak Knowledge designed as a web-based system so that Tjetak employees can access the system easily. Members responsible for creating Tjetak Knowledge interface design and flow were me and my teammate, Deana, then we split the task based on features. I was responsible for creating the design system, interface design for Home Page, Discussion Forum, and Best Practice Database. However, we also collaborated in designing Login Page and About Company.</ParagraphStyled>
 
-      <br/>
-
       <H3Styled>Login</H3Styled>
       <ParagraphStyled>Me and Deana were responsible for creating the Login Page. We did a little bit of exploration in designing the interface.</ParagraphStyled>
       
