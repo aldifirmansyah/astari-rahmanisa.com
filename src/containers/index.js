@@ -59,9 +59,9 @@ function App() {
               <Route path='/bogorsehat'>
               <Bogorsehat/>
               </Route>
-              <Route path="/tjetak-knowledge">
+              {/* <Route path="/tjetak-knowledge">
                 <TjetakKnowledge/>
-              </Route>
+              </Route> */}
               <Route path="/about">
                 <About />
               </Route>

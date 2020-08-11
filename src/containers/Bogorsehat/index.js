@@ -64,7 +64,7 @@ const Bogorsehat = () => {
       <PrototypeLink link='https://bit.ly/BogorSehatPrototype'>Try BogorSehat Prototype &#8594;</PrototypeLink>
 
     </SubContainer>
-    <OtherArticleLink previousLink='/tjetak-knowledge' previousText='&#x25C2; Tjetak Knowledge'/>
+    {/* <OtherArticleLink previousLink='/tjetak-knowledge' previousText='&#x25C2; Tjetak Knowledge'/> */}
     </>
   )
 }
