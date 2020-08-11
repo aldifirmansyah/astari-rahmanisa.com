@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Work from './Work';
 import About from './About';
-import TjetakKnowledge from './TjetakKnowledge';
+// import TjetakKnowledge from './TjetakKnowledge';
 import Bogorsehat from './Bogorsehat';
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
 import {

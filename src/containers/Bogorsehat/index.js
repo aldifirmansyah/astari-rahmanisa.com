@@ -7,7 +7,7 @@ import ImageWithSkeleton from '../../components/ImageWithSkeleton';
 import Banner from '../../assets/images/bogorsehat/banner/image.png';
 import BannerSkeleton from '../../assets/images/bogorsehat/banner/skeleton.png';
 
-import { MainTitle, MainTitleParagraph, TitleStyled, SubTitle, ParagraphStyled, ListStyled, PrototypeLink, OtherArticleLink } from '../../components/TextStyled';
+import { MainTitle, MainTitleParagraph, TitleStyled, SubTitle, ParagraphStyled, ListStyled, PrototypeLink } from '../../components/TextStyled';
 
 const SubContainer = styled.div`
   margin: 160px 120px 80px 120px;
