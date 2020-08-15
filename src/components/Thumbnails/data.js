@@ -7,9 +7,9 @@ const data = [
   // {
   //   photo: tjetakKnowledgePhoto,
   //   skeleton: tjetakKnowledgeSkeleton,
-  //   to: '/tjetak-knowledge',
-  //   title: 'Tjetak Knowledge',
-  //   description: 'Tjetak Knowledge is a Knowledge Management System designed for the entire company of Tjetak.',
+  //   to: '/t-knowledge',
+  //   title: 'T Industries Knowledge',
+  //   description: 'T Industries Knowledge is a Knowledge Management System designed for the entire company of T.',
   //   createdDate: 'May 3rd, 2020'
   // },
   {

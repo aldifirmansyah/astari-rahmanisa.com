@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Work from './Work';
 import About from './About';
-// import TjetakKnowledge from './TjetakKnowledge';
+import TKnowledge from './TKnowledge';
 import Bogorsehat from './Bogorsehat';
 import styled, {ThemeProvider, createGlobalStyle} from 'styled-components';
 import {
@@ -59,9 +59,9 @@ function App() {
               <Route path='/bogorsehat'>
               <Bogorsehat/>
               </Route>
-              {/* <Route path="/tjetak-knowledge">
-                <TjetakKnowledge/>
-              </Route> */}
+              <Route path="/t-knowledge">
+                <TKnowledge/>
+              </Route>
               <Route path="/about">
                 <About />
               </Route>
