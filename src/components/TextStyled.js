@@ -26,9 +26,11 @@ const MainTitleParagraph = styled.p`
 `;
 
 const H2Styled = styled.h2`
+  margin-top: 48px;
   font-size: 24px;
   line-height: 31px;
   @media (max-width: 768px) {
+    margin-top: 28px;
     font-size: 16px;
     line-height: 21px;
   }
@@ -37,9 +39,11 @@ const H2Styled = styled.h2`
 const TitleStyled = ({children}) => <H2Styled className='font-assistant'>{children}</H2Styled>
 
 const H3Styled = styled.h3`
+  margin-top: 48px;
   font-size: 20px;
   line-height: 26px;
   @media (max-width: 768px) {
+    margin-top: 28px;
     font-size: 14px;
     line-height: 180%;
   }
@@ -110,4 +114,18 @@ const OtherArticleLink = props => {
   )
 }
 
-export {MainTitle, MainTitleParagraph, TitleStyled, SubTitle, ParagraphStyled, ListStyled, PrototypeLink, OtherArticleLink}
+const PForImage = styled.p`
+  margin: 12px 0 0 0;
+  padding: 0;
+  text-align: center;
+  font-size: 12px;
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+`;
+
+const ImageName = ({children}) => (
+  <PForImage className='color-secondary'>{children}</PForImage>
+)
+
+export {MainTitle, MainTitleParagraph, TitleStyled, SubTitle, ParagraphStyled, ListStyled, PrototypeLink, OtherArticleLink, ImageName}
