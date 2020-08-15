@@ -1,5 +1,5 @@
-// import tjetakKnowledgePhoto from '../../assets/images/thumbnails/tjetak_knowledge.jpg';
-// import tjetakKnowledgeSkeleton from '../../assets/images/thumbnails/tjetak_knowledge_skeleton.jpg';
+import tjetakKnowledgePhoto from '../../assets/images/thumbnails/tjetak_knowledge.jpg';
+import tjetakKnowledgeSkeleton from '../../assets/images/thumbnails/tjetak_knowledge_skeleton.jpg';
 import bogorSehatPhoto from '../../assets/images/thumbnails/bogorsehat.jpg';
 import bogorSehatSkeleton from '../../assets/images/thumbnails/bogorsehat_skeleton.jpg';
 
