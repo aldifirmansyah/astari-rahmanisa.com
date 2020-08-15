@@ -11,8 +11,6 @@ const ImageStyled = styled.img`
   position: absolute;
   left: 0;
   width: 100vw!important;
-  padding: 0;
-  margin: 0;
   ` : ''}
   @media (max-width: 768px) {
     width: ${props => props.mobileWidth ? props.mobileWidth : props.width};
