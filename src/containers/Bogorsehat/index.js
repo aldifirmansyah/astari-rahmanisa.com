@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import SEO from '../../components/seo';
 
 import ImageWithSkeleton from '../../components/ImageWithSkeleton';
+import Image from '../../components/Image';
 
 import Banner from '../../assets/images/bogorsehat/banner/image.png';
 import BannerSkeleton from '../../assets/images/bogorsehat/banner/skeleton.png';
-
+import HomeAnimation from '../../assets/images/bogorsehat/gifs/home-animation.gif';
 import MiniDesignSystem from '../../assets/images/bogorsehat/images/mini-design-system.jpg';
 import MiniDesignSystemSkeleton from '../../assets/images/bogorsehat/images/mini-design-system_skeleton.jpg';
 import Booking from '../../assets/images/bogorsehat/images/booking.jpg';
@@ -58,6 +59,7 @@ const Bogorsehat = () => {
 
       <SubTitle>Home</SubTitle>
       <ParagraphStyled>Through Home Page, users can access every feature provided in BogorSehat. I also created a shortcut to access 3 nearest health facilities and shortcuts to read an article about each disease trend in Bogor. I got all of the illustrations from Flaticon credits to the author.</ParagraphStyled>
+      <Image src={HomeAnimation}/>
       <ImageName>Home Page Animation</ImageName>
 
       <SubTitle>Booking</SubTitle>

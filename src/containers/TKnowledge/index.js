@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import SEO from '../../components/seo';
 
 import ImageWithSkeleton from '../../components/ImageWithSkeleton';
+import Image from '../../components/Image';
 
 import Banner from '../../assets/images/t_knowledge/banner/image.png';
 import BannerSkeleton from '../../assets/images/t_knowledge/banner/skeleton.png';
@@ -17,10 +18,12 @@ import LoginExploration from '../../assets/images/t_knowledge/images/login-explo
 import LoginExplorationSkeleton from '../../assets/images/t_knowledge/images/login-exploration_skeleton.jpg';
 import LoginFinal from '../../assets/images/t_knowledge/images/login-final.jpg';
 import LoginFinalSkeleton from '../../assets/images/t_knowledge/images/login-final_skeleton.jpg';
+import HomeAnimation from '../../assets/images/t_knowledge/gifs/home-animation.gif';
 import DiscussionForum from '../../assets/images/t_knowledge/images/discussion-forum.jpg';
 import DiscussionForumSkeleton from '../../assets/images/t_knowledge/images/discussion-forum_skeleton.jpg';
 import BestPractice from '../../assets/images/t_knowledge/images/best-practice.jpg';
 import BestPracticeSkeleton from '../../assets/images/t_knowledge/images/best-practice_skeleton.jpg';
+import AboutCompanyAnimation from '../../assets/images/t_knowledge/gifs/about-company-animation.gif';
 
 import { MainTitle, MainTitleParagraph, TitleStyled, SubTitle, ParagraphStyled, ListStyled, PrototypeLink, OtherArticleLink, ImageName } from '../../components/TextStyled';
 
@@ -85,6 +88,8 @@ const TKnowledge = () => {
       </div>
       
       <SubTitle>Home</SubTitle>
+      <Image src={HomeAnimation}/>
+      <ImageName>Home Page</ImageName>
       
       <SubTitle>Discussion Forum</SubTitle>
       <ParagraphStyled>Here are some functionalities supported by Best Practice Database feature.</ParagraphStyled>
@@ -101,6 +106,8 @@ const TKnowledge = () => {
       <SubTitle>About Company</SubTitle>
       <ParagraphStyled>Here are some functionalities supported by About Company feature.</ParagraphStyled>
       <ListStyled lineHeight='260%' data={['Employee can read all company information.']}/>
+      <Image src={AboutCompanyAnimation}/>
+      <ImageName>About Company</ImageName>
 
       <TitleStyled>Prototype</TitleStyled>
       <PrototypeLink link='https://www.figma.com/proto/ViE44CHbdAPLNGgMzfEhjn/T-Knowledge?node-id=52%3A143&viewport=-2151%2C-1047%2C0.23472565412521362&scaling=min-zoom'>Try T Industries Knowledge Prototype for Employee &#8594;</PrototypeLink>
