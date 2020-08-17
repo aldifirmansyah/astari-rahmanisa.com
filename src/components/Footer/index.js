@@ -51,7 +51,7 @@ const Footer = props => {
 
   return (
     <FooterWrapper>
-      <Line style={{border: `0.4px solid ${'#6B6E8C'}`}}/>
+      <Line style={{border: `0.4px solid`}} className='color-secondary'/>
       <ContentWrapper>
         <p className='color-secondary' style={{padding: 0, margin: 0}}>&copy; {year} Astari Dwi Rahmanisa</p>
         <EmailWrapper href="mailto: astaridwir@gmail.com" className='color-primary'>
