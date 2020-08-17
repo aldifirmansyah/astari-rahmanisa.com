@@ -17,12 +17,15 @@ const Line = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  margin: 0;
+  margin: 32px 0;
   padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 768px) {
+    margin: 14px 0;
+  }
 `;
 
 const EmailWrapper = styled.a`
@@ -50,7 +53,7 @@ const Footer = props => {
     <FooterWrapper>
       <Line style={{border: `0.4px solid ${'#6B6E8C'}`}}/>
       <ContentWrapper>
-        <p className='color-secondary'>&copy; {year} Astari Dwi Rahmanisa</p>
+        <p className='color-secondary' style={{padding: 0, margin: 0}}>&copy; {year} Astari Dwi Rahmanisa</p>
         <EmailWrapper href="mailto: astaridwir@gmail.com" className='color-primary'>
           <Image src={props.isDarkMode ? DarkEmail : LightEmail} height='100%'/>
           <DesktopOnlySpan className='color-secondary'>astaridwir@gmail.com</DesktopOnlySpan>
