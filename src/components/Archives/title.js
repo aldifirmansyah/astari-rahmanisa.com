@@ -37,6 +37,10 @@ const Heading = styled.h2`
 const Paragraph = styled.p`
   margin: 0;
   padding: 0;
+  font-size: 14px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 const DesktopTitle = () => {
@@ -44,7 +48,7 @@ const DesktopTitle = () => {
     <DesktopTitleWrapper>
       <div>
         <Heading className='font-assistant'>Archives</Heading>
-        <Paragraph>Other example of my work <span role='img' aria-label='art'>🎨</span></Paragraph>
+        <Paragraph className='color-secondary'>Other example of my work <span role='img' aria-label='art'>🎨</span></Paragraph>
       </div>
     </DesktopTitleWrapper>
   )
