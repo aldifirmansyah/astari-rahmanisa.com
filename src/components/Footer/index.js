@@ -50,10 +50,10 @@ const Footer = props => {
     <FooterWrapper>
       <Line style={{border: `0.4px solid ${'#6B6E8C'}`}}/>
       <ContentWrapper>
-        <p>&copy; {year} Astari Dwi Rahmanisa</p>
+        <p className='color-secondary'>&copy; {year} Astari Dwi Rahmanisa</p>
         <EmailWrapper href="mailto: astaridwir@gmail.com" className='color-primary'>
           <Image src={props.isDarkMode ? DarkEmail : LightEmail} height='100%'/>
-          <DesktopOnlySpan>astaridwir@gmail.com</DesktopOnlySpan>
+          <DesktopOnlySpan className='color-secondary'>astaridwir@gmail.com</DesktopOnlySpan>
         </EmailWrapper>
       </ContentWrapper>
     </FooterWrapper>
