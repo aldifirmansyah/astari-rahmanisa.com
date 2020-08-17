@@ -81,7 +81,7 @@ const ParagraphAsLink = styled.p`
   }
 `;
 
-const LinkExternal = props => <ParagraphAsLink className='active-header' onClick={props.onClick}>{props.children}</ParagraphAsLink>
+const LinkExternal = props => <ParagraphAsLink className='active-header font-assistant' onClick={props.onClick}>{props.children}</ParagraphAsLink>
 
 const PrototypeLink = props => {
   function openLink() {
