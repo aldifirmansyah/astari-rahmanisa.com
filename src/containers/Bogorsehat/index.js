@@ -8,8 +8,10 @@ import Image from '../../components/Image';
 import Banner from '../../assets/images/bogorsehat/banner/image.png';
 import BannerSkeleton from '../../assets/images/bogorsehat/banner/skeleton.png';
 import HomeAnimation from '../../assets/images/bogorsehat/gifs/home-animation.gif';
-import MiniDesignSystem from '../../assets/images/bogorsehat/images/mini-design-system.jpg';
-import MiniDesignSystemSkeleton from '../../assets/images/bogorsehat/images/mini-design-system_skeleton.jpg';
+import MiniDesignSystemLight from '../../assets/images/bogorsehat/images/mini-design-system-light.png';
+import MiniDesignSystemLightSkeleton from '../../assets/images/bogorsehat/images/mini-design-system-light_skeleton.png';
+import MiniDesignSystemDark from '../../assets/images/bogorsehat/images/mini-design-system-dark.png';
+import MiniDesignSystemDarkSkeleton from '../../assets/images/bogorsehat/images/mini-design-system-dark_skeleton.png';
 import Booking from '../../assets/images/bogorsehat/images/booking.jpg';
 import BookingSkeleton from '../../assets/images/bogorsehat/images/booking_skeleton.jpg';
 import Article from '../../assets/images/bogorsehat/images/article.jpg';
@@ -25,7 +27,9 @@ const SubContainer = styled.div`
   }
 `;
 
-const Bogorsehat = () => {
+const Bogorsehat = ({ isDarkMode }) => {
+  const MiniDesignSystem = isDarkMode ? MiniDesignSystemDark : MiniDesignSystemLight;
+  const MiniDesignSystemSkeleton = isDarkMode ? MiniDesignSystemDarkSkeleton : MiniDesignSystemLightSkeleton;
   return (
     <>
     <SubContainer>

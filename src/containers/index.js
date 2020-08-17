@@ -57,7 +57,7 @@ function App() {
             <Header isDarkMode={_isDarkMode} setDarkMode={toggleDarkMode}/>
             <Switch>
               <Route path='/bogorsehat'>
-              <Bogorsehat/>
+              <Bogorsehat isDarkMode={_isDarkMode} />
               </Route>
               <Route path="/t-knowledge">
                 <TKnowledge isDarkMode={_isDarkMode} />
