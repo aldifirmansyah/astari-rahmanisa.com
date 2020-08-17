@@ -5,6 +5,8 @@ import LightLinkedin from '../../assets/images/linkedin/light.svg';
 import DarkLinkedin from '../../assets/images/linkedin/dark.svg';
 import LightBehance from '../../assets/images/behance/light.svg';
 import DarkBehance from '../../assets/images/behance/dark.svg';
+import LightDribbble from '../../assets/images/dribbble/light.svg';
+import DarkDribbble from '../../assets/images/dribbble/dark.svg';
 import LightVsco from '../../assets/images/vsco/light.svg';
 import DarkVsco from '../../assets/images/vsco/dark.svg';
 
@@ -33,8 +35,12 @@ const Links = props => {
     window.open('https://www.linkedin.com/in/astari-rahmanisa/', '_blank');
   }
   
-  function  openBehance() {
+  function openBehance() {
     window.open('https://www.behance.net/astari-rahmanisa', '_blank');
+  }
+
+  function openDribbble() {
+    window.open('https://dribbble.com/astarri', '_blank');
   }
   
   function openVsco() {
@@ -48,6 +54,9 @@ const Links = props => {
     </IconWrapper>
     <IconWrapper onClick={openBehance}>
       <Image src={props.isDarkMode ? DarkBehance : LightBehance} width='24px'/>
+    </IconWrapper>
+    <IconWrapper onClick={openDribbble}>
+      <Image src={props.isDarkMode ? DarkDribbble : LightDribbble} width='24px'/>
     </IconWrapper>
     <IconWrapper onClick={openVsco}>
       <Image src={props.isDarkMode ? DarkVsco : LightVsco} width='24px'/>
