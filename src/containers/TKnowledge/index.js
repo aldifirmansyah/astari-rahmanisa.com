@@ -88,7 +88,7 @@ const TKnowledge = () => {
       </div>
       
       <SubTitle>Home</SubTitle>
-      <Image src={HomeAnimation}/>
+      <Image src={HomeAnimation} width='100%'/>
       <ImageName>Home Page</ImageName>
       
       <SubTitle>Discussion Forum</SubTitle>
@@ -106,7 +106,7 @@ const TKnowledge = () => {
       <SubTitle>About Company</SubTitle>
       <ParagraphStyled>Here are some functionalities supported by About Company feature.</ParagraphStyled>
       <ListStyled lineHeight='260%' data={['Employee can read all company information.']}/>
-      <Image src={AboutCompanyAnimation}/>
+      <Image src={AboutCompanyAnimation} width='100%'/>
       <ImageName>About Company</ImageName>
 
       <TitleStyled>Prototype</TitleStyled>

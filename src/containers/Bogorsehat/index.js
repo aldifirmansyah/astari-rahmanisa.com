@@ -59,7 +59,7 @@ const Bogorsehat = () => {
 
       <SubTitle>Home</SubTitle>
       <ParagraphStyled>Through Home Page, users can access every feature provided in BogorSehat. I also created a shortcut to access 3 nearest health facilities and shortcuts to read an article about each disease trend in Bogor. I got all of the illustrations from Flaticon credits to the author.</ParagraphStyled>
-      <Image src={HomeAnimation}/>
+      <Image src={HomeAnimation} width='100%'/>
       <ImageName>Home Page Animation</ImageName>
 
       <SubTitle>Booking</SubTitle>
