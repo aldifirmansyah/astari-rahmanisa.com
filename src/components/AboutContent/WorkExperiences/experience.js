@@ -17,6 +17,10 @@ const Title = styled.h3`
   line-height: 19px;
   font-weight: bold;
   margin: 0;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-heigth: 14px;
+  }
 `;
 
 const Date = styled.p`
