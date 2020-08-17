@@ -60,7 +60,7 @@ function App() {
               <Bogorsehat/>
               </Route>
               <Route path="/t-knowledge">
-                <TKnowledge/>
+                <TKnowledge isDarkMode={_isDarkMode} />
               </Route>
               <Route path="/about">
                 <About />

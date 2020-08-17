@@ -8,12 +8,14 @@ import Image from '../../components/Image';
 import Banner from '../../assets/images/t_knowledge/banner/image.png';
 import BannerSkeleton from '../../assets/images/t_knowledge/banner/skeleton.png';
 
-import TableFeatures from '../../assets/images/t_knowledge/images/table-features.jpg';
-import TableFeaturesSkeleton from '../../assets/images/t_knowledge/images/table-features_skeleton.jpg';
-import Moodboard from '../../assets/images/t_knowledge/images/moodboard.jpg';
-import MoodboardSkeleton from '../../assets/images/t_knowledge/images/moodboard_skeleton.jpg';
-import MiniDesignSystem from '../../assets/images/t_knowledge/images/mini-design-system.jpg';
-import MiniDesignSystemSkeleton from '../../assets/images/t_knowledge/images/mini-design-system_skeleton.jpg';
+import TableFeatures from '../../assets/images/t_knowledge/images/table-features.png';
+import TableFeaturesSkeleton from '../../assets/images/t_knowledge/images/table-features_skeleton.png';
+import Moodboard from '../../assets/images/t_knowledge/images/moodboard.png';
+import MoodboardSkeleton from '../../assets/images/t_knowledge/images/moodboard_skeleton.png';
+import MiniDesignSystemLight from '../../assets/images/t_knowledge/images/mini-design-system-light.png';
+import MiniDesignSystemLightSkeleton from '../../assets/images/t_knowledge/images/mini-design-system-light_skeleton.png';
+import MiniDesignSystemDark from '../../assets/images/t_knowledge/images/mini-design-system-dark.png';
+import MiniDesignSystemDarkSkeleton from '../../assets/images/t_knowledge/images/mini-design-system-dark_skeleton.png';
 import LoginExploration from '../../assets/images/t_knowledge/images/login-exploration.jpg';
 import LoginExplorationSkeleton from '../../assets/images/t_knowledge/images/login-exploration_skeleton.jpg';
 import LoginFinal from '../../assets/images/t_knowledge/images/login-final.jpg';
@@ -35,7 +37,9 @@ const SubContainer = styled.div`
   }
 `;
 
-const TKnowledge = () => {
+const TKnowledge = ({ isDarkMode }) => {
+  const MiniDesignSystem = isDarkMode ? MiniDesignSystemDark : MiniDesignSystemLight;
+  const MiniDesignSystemSkeleton = isDarkMode ? MiniDesignSystemDarkSkeleton : MiniDesignSystemLightSkeleton;
   return (
     <>
     <SubContainer>
